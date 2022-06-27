@@ -1,0 +1,8 @@
+version: '3'
+services:
+  chap:
+    image: node:lts
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: node index.js
