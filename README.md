@@ -24,6 +24,11 @@ Use `-v` or `--version` to retrieve the current version (the one of the latest r
 node index.js -v path/to/CHANGELOG.md
 ```
 
+Use `-c` or `--changes` to retrieve the content (as markdown) of the latest release.
+```
+node index.js -c path/to/CHANGELOG.md
+```
+
 Use `--today` to also make sure that the date of the latest release is the current date.
 ```
 node index.js --today path/to/CHANGELOG.md

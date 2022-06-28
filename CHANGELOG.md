@@ -6,9 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2022-06-28
+### Added
+- Line indicator for error messages
+- New option `-c` (or `--changes`) to retrieve the content of the latest release
+- Extended validation (EmptyReleaseError, UngroupedTypeError, MissingTypeError, EmptyTypeError)
+- Tests
+
 ## [1.0.0] - 2022-06-27
 ### Added
 - Initial release
 
 [Unreleased]: https://github.com/wesone/chap/compare/v1.0.0...HEAD
+[1.1.0]: https://github.com/wesone/chap/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/wesone/chap/releases/tag/v1.0.0

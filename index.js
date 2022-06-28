@@ -1,39 +1,6 @@
-const fs = require('fs');
-const Parser = require('./lib/Parser');
+#!/usr/bin/env node
 
-const handle = async config => {
-    const parser = new Parser(config);
-    let pendingLine = null;
-
-    const stream = fs.createReadStream(config.path, 'utf8');
-
-    stream.on('error', error => {
-        console.log(`ERROR: ${error.message}`, error);
-    });
-
-    stream.on('data', chunk => {
-        const lines = chunk.split(/\r?\n/);
-        if(pendingLine)
-        {
-            lines[0] = pendingLine + lines[0];
-            pendingLine = null;
-        }
-
-        if(lines[lines.length - 1].length)
-            pendingLine = lines.pop();
-            
-        parser.process(lines);
-    });
-
-    return new Promise(resolve => stream.on('close', () => {
-        if(pendingLine)
-            parser.process(pendingLine);
-
-        parser.validate();
-    
-        resolve(parser);
-    }));
-};
+const handle = require('./lib/handle');
 
 const args = process.argv;
 args.splice(0, 2);
@@ -49,8 +16,13 @@ args.splice(0, 2);
             case '-v':
                 config.diplayVersion = true;
                 break;
+            case '--changes':
+            case '-c':
+                config.diplayChanges = true;
+                break;
             case '--today':
                 config.releaseToday = true;
+                break;
             // case '--strict':
             //     config.strict = true;
             //     break;
@@ -67,6 +39,9 @@ args.splice(0, 2);
             return parser.errors.forEach(({message}) => console.error(message));
 
         if(config.diplayVersion)
-            console.log(parser.releases[0].version);
+            console.log(parser.latestRelease.version);
+
+        if(config.diplayChanges)
+            parser.printLatestChanges();
     });
 })(args);
