@@ -36,7 +36,10 @@ args.splice(0, 2);
 
     handle(config).then(parser => {
         if(!parser.isValid)
-            return parser.errors.forEach(({message}) => console.error(message));
+        {
+            parser.errors.forEach(({message}) => console.error(message));
+            return process.exit(1);
+        }
 
         if(config.diplayVersion)
             console.log(parser.latestRelease.version);
