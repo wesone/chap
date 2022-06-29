@@ -4,7 +4,7 @@ This project is a simple **cha**ngelog **p**arser written in Node.js. The parser
 
 It will simply check if a specified changelog follows rules like:
 + contains an 'Unreleased' section at the top of all releases
-+ using only valid *types of changes*
++ uses only valid *types of changes*
 + does not contain undefined references
 + does not define references that aren't used
 + has valid versioning (e.g. 1.1.0 can't be a later release than 1.2.0)
