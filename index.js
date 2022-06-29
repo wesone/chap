@@ -45,6 +45,6 @@ args.splice(0, 2);
             console.log(parser.latestRelease.version);
 
         if(config.diplayChanges)
-            parser.printLatestChanges();
+            console.log(parser.getLatestChanges());
     });
 })(args);
