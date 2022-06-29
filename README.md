@@ -34,6 +34,11 @@ Use `--today` to also make sure that the date of the latest release is the curre
 node index.js --today path/to/CHANGELOG.md
 ```
 
+You may use `npm link` to install Chap to your PATH. You can then use:
+```
+chap -v path/to/CHANGELOG.md
+```
+
 ## Docker
 
 You can also use [Chap](https://hub.docker.com/r/wesone/chap) with [Docker](https://www.docker.com/).
