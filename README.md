@@ -7,7 +7,7 @@ It will simply check if a specified changelog follows rules like:
 + using only valid *types of changes*
 + does not contain undefined references
 + does not define references that aren't used
-+ has valid versioning (1.1.0 can't be a later release than 1.2.0)
++ has valid versioning (e.g. 1.1.0 can't be a later release than 1.2.0)
 + ...
 
 It will not check if the contents of the file comply with the [Keep a Changelog](https://keepachangelog.com/) format completely.
