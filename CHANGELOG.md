@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2022-06-29
+### Added
+- Dockerfile to build a ready-to-use image
+- docker-compose.production.yml for automatic building
+
 ## [1.1.0] - 2022-06-28
 ### Added
 - Line indicator for error messages
@@ -17,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/wesone/chap/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/wesone/chap/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/wesone/chap/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/wesone/chap/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/wesone/chap/releases/tag/v1.0.0

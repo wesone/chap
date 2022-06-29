@@ -1,0 +1,7 @@
+version: "3"
+services:
+  chap:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    image: wesone/chap

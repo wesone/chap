@@ -36,24 +36,7 @@ node index.js --today path/to/CHANGELOG.md
 
 ## Docker
 
-You can also use Chap with [Docker](https://www.docker.com/).
-
-### docker-compose 
-
+You can also use [Chap](https://hub.docker.com/r/wesone/chap) with [Docker](https://www.docker.com/).
 ```
-docker-compose run --rm -v /path/to/CHANGELOG.md:/usr/src/app/CHANGELOG.md chap node index.js CHANGELOG.md
+docker run --rm -v /path/to/CHANGELOG.md:/usr/src/app/CHANGELOG.md wesone/chap:latest node index.js CHANGELOG.md
 ```
-
-### Docker only
-
-If you do not want to use docker-compose:
-```
-docker run --rm -v `pwd`:`pwd` -w `pwd` -v /path/to/CHANGELOG.md:`pwd`/CHANGELOG.md node:lts node index.js CHANGELOG.md
-```
-To break this down:
-+ `--rm` to automatically remove the container after the command is done
-+ `` -v `pwd`:`pwd` `` mount the current working directory (host) to the same directory inside the container (to mount the project)
-+ `` -w `pwd` `` to also set the working directory inside the container 
-+ `` -v /path/to/CHANGELOG.md:`pwd`/CHANGELOG.md `` the seconds `-v` will mount the desired changelog file to `` `pwd`/CHANGELOG.md `` inside the container
-+ `node:lts` the image to use
-+ `node index.js CHANGELOG.md` the actual command to run inside the container
