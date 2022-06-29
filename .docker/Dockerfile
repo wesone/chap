@@ -11,3 +11,4 @@ COPY LICENSE.md \
 COPY lib lib
 
 RUN npm ci --omit=dev
+RUN npm link

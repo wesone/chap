@@ -38,5 +38,5 @@ node index.js --today path/to/CHANGELOG.md
 
 You can also use [Chap](https://hub.docker.com/r/wesone/chap) with [Docker](https://www.docker.com/).
 ```
-docker run --rm -v /path/to/CHANGELOG.md:/usr/src/app/CHANGELOG.md wesone/chap:latest node index.js CHANGELOG.md
+docker run --rm -v /path/to/CHANGELOG.md:/usr/src/app/CHANGELOG.md wesone/chap chap CHANGELOG.md
 ```
