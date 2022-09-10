@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3] - 2022-09-10
+### Added
+- Support for comment blocks
+
 ## [1.1.2] - 2022-06-29
 ### Changed
 - Terminate the processs with exit code 1 in case of an error
@@ -26,7 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/wesone/chap/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/wesone/chap/compare/v1.1.3...HEAD
+[1.1.3]: https://github.com/wesone/chap/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/wesone/chap/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/wesone/chap/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/wesone/chap/compare/v1.0.0...v1.1.0
